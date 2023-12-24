@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import 'animate.css';
 import 'remixicon/fonts/remixicon.css'
 
+import CustomTailwindClassNameProvider from './components/customTailwindClassName/customTailwindClassNameProvider.jsx';
 import Layout from './components/layout/layout';
 
 // import './App.css';
@@ -16,5 +17,9 @@ const routes = createBrowserRouter([
 ])
 
 export default function App() {
-  return <RouterProvider router={routes} />
+  return (
+    <CustomTailwindClassNameProvider>
+      <RouterProvider router={routes} />
+    </CustomTailwindClassNameProvider>
+  );
 }

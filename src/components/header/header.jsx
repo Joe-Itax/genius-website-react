@@ -1,9 +1,14 @@
 import { NavLink } from 'react-router-dom';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useContext, useState } from "react";
+import tailwindContext from "../../context/tailwind-context";
+
 
 function Header() {
+  const myCustomClassName = useContext(tailwindContext);
+  console.log(myCustomClassName.flexJCC_AIC);
   return (
-    <>
+    <header className={myCustomClassName.flexJCC_AIC}>
       <div className="logo-box">
         <NavLink to="./">
           <i className="ri-at-line"></i>
@@ -25,7 +30,7 @@ function Header() {
       <div className="menu-icon-box">
         <i className="ri-menu-4-line menu-icon open-menu"></i>
       </div>
-    </>
+    </header>
   )
 }
 
