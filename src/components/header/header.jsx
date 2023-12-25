@@ -7,7 +7,7 @@ import tailwindContext from "../../context/tailwind-context";
 function Header() {
   const myCustomClassName = useContext(tailwindContext);
   return (
-    <header className={`flex justify-between items-center w-full bg-[#191919] text-gray-100 z-30 text-base transition-all duration-75 ease-in-out border-b border-solid border-[#262626]`}>
+    <header className={`flex justify-between items-center w-full bg-[#191919] text-gray-100 z-30 text-base ${myCustomClassName.transition} border-b border-solid border-[#262626]`}>
       <div className="logo-box">
         <NavLink to="./" className={`${myCustomClassName.flexJCC_AIC} p-8 pl-0`}>
           <i className="ri-at-line"></i>
