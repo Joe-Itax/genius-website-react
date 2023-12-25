@@ -1,17 +1,16 @@
 import { Outlet } from "react-router-dom";
 
 import Header from "../header/header";
+import Footer from "../footer/footer";
 
 export default function Layout() {
   return (
     <>
       <Header />
-      <main>
+      <main className={`border-b border-solid border-[#262626]`}>
         <Outlet />
       </main>
-      <footer>
-        <p>Copyright © 2023 My Website</p>
-      </footer>
+      <Footer/>
     </>
   )
 }
