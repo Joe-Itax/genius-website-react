@@ -14,7 +14,7 @@ function Header() {
           <span>Genius</span>
         </NavLink>
       </div>
-      <nav className={``}>
+      <nav className={``} style={{display: 'none'}}>
         <ul className={`${myCustomClassName.flexJCC_AIC}`}>
           <li className="a-active"><NavLink to="./">Accueil</NavLink></li>
           <li><NavLink to="./services">Services</NavLink></li>
